@@ -250,19 +250,22 @@ body {
     font-size: 50px;
 }
 
-.para-1:hover{
+.para-1:hover {
     transform: scale(1.01) translateY(-10px);
     cursor: pointer;
 }
-.para-2:hover{
-        transform: scale(1.01) translateY(-10px);
-        cursor: pointer;
-    }
-.para-3:hover{
+
+.para-2:hover {
     transform: scale(1.01) translateY(-10px);
     cursor: pointer;
 }
-.para-4:hover{
+
+.para-3:hover {
+    transform: scale(1.01) translateY(-10px);
+    cursor: pointer;
+}
+
+.para-4:hover {
     transform: scale(1.01) translateY(-10px);
     cursor: pointer;
 }
@@ -277,13 +280,14 @@ body {
     margin-top: -100px;
 }
 
-.card-container{
+.card-container {
     perspective: 1000px;
     width: 200px;
     height: 300px;
     position: relative;
 }
-.card{
+
+.card {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
@@ -291,29 +295,33 @@ body {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
 
 }
-.card:hover{
+
+.card:hover {
     transform: rotateY(180deg);
 }
+
 .card-front,
-.card-back{
+.card-back {
     position: absolute;
     width: 100%;
-    height:100%;
+    height: 100%;
     backface-visibility: hidden;
-    
+
 }
 
-.card-front{
+.card-front {
     background-color: #ffffff;
     text-align: center;
 }
-.card-back{
+
+.card-back {
     background-color: #e0b2da;
     transform: rotateY(180deg);
-    
+
 
 }
-.inner-card{
+
+.inner-card {
     background-image: linear-gradient(to right bottom, rgba(197, 52, 202, 0.74), rgba(35, 8, 134, 0.74)), url(image/image-3.jpg);
     display: flex;
     justify-content: end;
@@ -323,7 +331,8 @@ body {
     clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 100%);
     padding: 0 15px 50px 0;
 }
-.card-title{
+
+.card-title {
     height: 50px;
     width: 250px;
     background-image: linear-gradient(to right bottom, rgba(197, 52, 202, 0.74), rgba(35, 8, 134, 0.74)), url(image/image-1.jpg);
@@ -332,29 +341,189 @@ body {
     text-transform: uppercase;
     text-align: right;
     margin-top: 10px;
-   
+
 }
-.feature-list{
+
+.feature-list {
     padding: 5px 20px;
 }
+
 .feature-list ul {
     list-style: none;
 }
+
 .feature-list ul li:not(:last-child) {
     border-bottom: 1px solid #e0b2da;
 }
-.card-back{
+
+.card-back {
     text-align: center;
 }
-.text{
+
+.text {
     margin-top: 80px;
 }
+
 .btn:hover {
     background-color: #ffffff;
-   
+
 }
-.col-1-of-3{
+
+.col-1-of-3 {
     margin: 20px 70px;
 }
 
 /* ariful vai*/
+.testimonial {
+    padding: 100px 150px;
+    position: relative;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.15;
+    overflow: hidden;
+}
+
+.bg-video-content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.skew {
+    width: 75%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    padding: 60px 110px;
+    transform: skew(-10deg);
+    margin: 0 auto;
+}
+
+.story-skew-fix {
+    transform: skew(10deg);
+}
+
+.story-shape {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-right: 25px;
+    transition: all 0.2s;
+}
+
+.story-shape::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    content: "";
+    top: 0;
+    left: 0;
+    transition: all 0.2s;
+}
+
+.story-shape:hover::after {
+    opacity: 0.7;
+}
+
+.story-shape:hover .story-img {
+    transform: scale(0.9);
+    object-fit: cover;
+}
+
+.story-img {
+    height: 100%;
+    transition: all 0.2s;
+}
+
+.story-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    color: #fff;
+    z-index: 1;
+    text-align: center;
+}
+
+.story-shape:hover .story-caption {
+    visibility: visible;
+}
+
+.story-content {
+    width: 85%;
+}
+
+.section-book {
+    padding: 150px 150px;
+    background-image: linear-gradient(to bottom,
+            rgba(40, 180, 133, 0.7),
+            rgba(126, 213, 111, 0.7));
+}
+
+.book {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("images/nat-10.jpg");
+    background-size: 100%;
+    border-radius: 3px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.book-form {
+    padding: 60px;
+    width: 50%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-input {
+    font-size: 16px;
+    padding: 15px 20px;
+    border-radius: 2px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+}
+
+.form-lebel {
+    visibility: hidden;
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    margin-top: 7px;
+}
+
+.form-input:placeholder-shown+.form-lebel {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+}
+
+.form-input:focus {
+    outline: none;
+    border-bottom: 3px solid orange;
+}
+
+.btn-green {
+    background-color: var(--dark-green);
+    color: #fff;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 100px;
+}
+
+.btn-green::after {
+    background-color: var(--dark-green);
+}
