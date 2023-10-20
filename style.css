@@ -527,3 +527,19 @@ body {
 .btn-green::after {
     background-color: var(--dark-green);
 }
+
+/*footer*/
+.footer {
+    padding: 10%;
+    color: #ffffff;
+    background-color: #111024;
+    text-align: center;
+}
+
+.footer-manu {
+    margin-left: 10%;
+}
+
+.F-text {
+    margin: 20px 20px;
+}
